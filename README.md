@@ -96,16 +96,16 @@
 
 Для инкрементного бекапа выполянется следующая команда:
 
-mysqlbackup --defaults-file=/home/dbadmin/my.cnf \
-  --incremental --incremental-base=history:last_backup \
-  --backup-dir=/home/dbadmin/temp_dir \
-  --backup-image=incremental_image1.bi \
-   backup-to-image
+	mysqlbackup --defaults-file=/home/dbadmin/my.cnf \
+ 	 --incremental --incremental-base=history:last_backup \
+	  --backup-dir=/home/dbadmin/temp_dir \
+	  --backup-image=incremental_image1.bi \
+ 	  backup-to-image
 
 Значение ключей:
 
 	--defaults-file=/home/dbadmin/my.cnf 				  # указание на конфигурационный файл СУБД, в котором хранятся данные о размещении БД.	
-	--incremental --incremental-base=history:last_backup  # указание места выполенния предыдущего бекапа для определения точки начала бекапа из метаданных.
+	--incremental --incremental-base=history:last_backup  		  # указание места выполенния предыдущего бекапа для определения точки начала бекапа из метаданных.
 	--backup-dir=/home/dbadmin/temp_dir 				  # директория для хранения метаданных бекапа и временных файлов.
 	--backup-image=incremental_image1.bi				  # если не указан путь, то backup image соханится по backup-dir пути. 
 
